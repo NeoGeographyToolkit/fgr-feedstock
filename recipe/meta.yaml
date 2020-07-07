@@ -1,11 +1,11 @@
-{% set version = "bfcb9f9" %}
+{% set version = "e78ce15" %}
 
 package:
   name: fgr
   version: {{ version }}
 
 source:
-  git_url: https://github.com/intel-isl/FastGlobalRegistration.git
+  git_url: git@github.com:oleg-alexandrov/FastGlobalRegistration.git
   git_tag: {{ version }}
   patches:
 
@@ -18,7 +18,11 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
+    - flann                     1.9.1
+    - eigen                     3.3.7
   run:
+    - flann                     1.9.1
+    - eigen                     3.3.7
 
 test:
   commands:

@@ -3,11 +3,12 @@
 mkdir build && cd build
 
 CUSTOM_SOURCE_DIR=${SRC_DIR}/source
+INC_FLAGS="-I${PREFIX}/include/eigen3 -I${PREFIX}/include -O3 -L${PREFIX}/lib -lflann_cpp -O3 -std=c++11"
 
 # Build
 cmake                                        \
   -DCMAKE_BUILD_TYPE=Release                 \
-  -DCMAKE_CXX_FLAGS='-O3 -std=c++11'         \
+  -DCMAKE_CXX_FLAGS="${INC_FLAGS}"           \
   -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}      \
   -DCMAKE_PREFIX_PATH=${PREFIX}              \
   -DCMAKE_VERBOSE_MAKEFILE=ON                \
