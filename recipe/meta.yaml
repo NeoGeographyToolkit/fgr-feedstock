@@ -20,12 +20,12 @@ requirements:
   host:
     - flann                     1.9.1
     - eigen                     3.3.7
-    - isis                      4.4.0
+    - isis                      4.4.0 # to catch dependency problems
 
   run:
     - flann                     1.9.1
     - eigen                     3.3.7
-    - isis                      4.4.0
+    - isis                      4.4.0 # to catch dependency problems
 
 test:
   commands:
