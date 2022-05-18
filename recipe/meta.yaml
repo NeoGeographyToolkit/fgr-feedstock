@@ -1,4 +1,4 @@
-{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
+{% set version = "isis6" %} # synched up to isis dependencies for this version
 
 package:
   name: fgr
@@ -19,11 +19,11 @@ requirements:
     - cmake
   host:
     - flann                     1.9.1
-    - eigen                     3.3.7
+    - eigen                     3.4.0
 
   run:
     - flann                     1.9.1
-    - eigen                     3.3.7
+    - eigen                     3.4.0
 
 test:
   commands:
