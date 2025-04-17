@@ -3,7 +3,7 @@
 mkdir build && cd build
 
 CUSTOM_SOURCE_DIR=${SRC_DIR}/source
-INC_FLAGS="-I${PREFIX}/include/eigen3 -I${PREFIX}/include -O3 -L${PREFIX}/lib -lflann_cpp -llz4 -O3 -std=c++11"
+INC_FLAGS="-I${PREFIX}/include/eigen3 -I${PREFIX}/include -O3 -L${PREFIX}/lib -lflann_cpp -O3 -std=c++11"
 
 # Build
 cmake                                        \

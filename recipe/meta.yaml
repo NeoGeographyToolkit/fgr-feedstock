@@ -1,11 +1,11 @@
-{% set version = "asp3.4.0_alpha" %} # synched up to isis dependencies for this version
+{% set version = "asp3.5.0" %} # synched up to isis dependencies for this version
 
 package:
   name: fgr
   version: {{ version }}
 
 source:
-  git_url: git@github.com:oleg-alexandrov/FastGlobalRegistration.git
+  git_url: git@github.com:NeoGeographyToolkit/FastGlobalRegistration.git
 # git_tag: {{ version }} # if commented out will use the latest version
   patches:
 
@@ -18,11 +18,11 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - flann                     1.9.2
+    - flann                     1.9.1
     - eigen                     3.4.0
 
   run:
-    - flann                     1.9.2
+    - flann                     1.9.1
     - eigen                     3.4.0
 
 test:
