@@ -10,14 +10,18 @@ source:
   patches:
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - cmake
+    - cmake                     3.27.9
   host:
+    # Having compilers as part of dependencies as in the local env helps
+    # sort out issues with conda-build and ISIS compatibility.
+    - c-compiler                1.9.0
+    - compilers                 1.9.0
+    - cxx-compiler              1.9.0
+    - fortran-compiler          1.9.0
     - flann                     1.9.1
     - eigen                     3.4.0
 
